@@ -12,6 +12,10 @@ PYTHON_PACKAGES := \
 	jupyter notebook==$(NOTEBOOK_VERSION) \
 	torch
 
+.PHONY: format
+format: deps  ## Auto-format and check pep8
+	  black --line-length 119 *.py && flake8 --max-line-length=119 *.py
+
 deps:  ## Ensure OS Dependencies (Only works for MacOS)
 ifeq ($(UNAME_S),Darwin)
 	@# Check only for MacOS

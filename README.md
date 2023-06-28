@@ -13,17 +13,16 @@ classifications of user-provided arbitrary strings.
 When applied to a corporate dataset consisting of a CSV of ProductID to ProductFamily associations, the resulting model
 classifies with 99.999% accuracy.  In addition, it is also able to classify non-existent ProductIDs with great
 accuracy.  For example, a real ProductID "C9100-NM-8X" may be determined to be of the ProductFamily "Catalyst 9K
-Network Modules".  If in the future slightly different and never-seen-before ProductIDs such as "D9300-NM-9X" appear,
-it successfully classifies the string to what we would logically assume to be the correct ProductFamily which in this
-case is also "Catalyst 9K Network Modules".  The dataset I used to write this code is not released, and the prior
-example is made up.
+Network Modules".  If in the future slightly different and never-seen-before ProductID such as "D9300-NM-9X" appears,
+the model successfully classifies the string to what we would logically assume to be the correct ProductFamily which in
+this case is also "Catalyst 9K Network Modules".  The dataset I used to write this code is not released.
 
 
 ## Usage
 
 ### Dataset
 
-A sampel dataset is not yet included, but it might look like this:
+A sample dataset is not yet included, but it might look like this:
 
 ```CSV
 # saved at ./data/dataset.csv.gz
